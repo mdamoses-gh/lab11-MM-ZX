@@ -9,7 +9,6 @@ One function per operation, in order.
 # Partner 2: Ziyue Xu
 import math
 # First example
-def add(a, b):
 import math
 
 def add(a, b):
@@ -22,9 +21,10 @@ def mul(a, b):
     return a * b
 
 def div(a, b):
-    if b == 0:
-        raise ZeroDivisionError("Cannot divide by zero")
-    return a / b
+    try:
+        return b / a
+    except ZeroDivisionError:
+        raise ZeroDivisionError
 
 def log(a, b):
     try:
