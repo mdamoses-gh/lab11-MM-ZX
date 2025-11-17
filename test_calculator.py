@@ -34,7 +34,8 @@ class TestCalculator(unittest.TestCase):
     #     # call division function inside, example:
     #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
     #     #     div(0, 5)
-        div.assertRaises(ZeroDivisionError, 0, 5)
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 5)
 
     def test_logarithm(self): # 3 assertions
         assert log(2, 4) == 2
@@ -45,7 +46,8 @@ class TestCalculator(unittest.TestCase):
     #     # use same technique from test_divide_by_zero
     #     fill in code
     # ##########################
-        log.assertRaises(ValueError, 5, 0)
+        with self.assertRaises(ValueError):
+            log(5, 0)
     
     ######## Partner 1
     def test_log_invalid_argument(self): # 1 assertion
@@ -68,9 +70,8 @@ class TestCalculator(unittest.TestCase):
         assert square_root(9) == 3
         assert square_root(0) == 0
     ##########################
-
-    with self.assertRaises(ValueError):
-        square_root(-1)
+        with self.assertRaises(ValueError):
+            square_root(-1)
 # Do not touch this
 if __name__ == "__main__":
     unittest.main()
