@@ -9,7 +9,15 @@ One function per operation, in order.
 # Partner 2: Ziyue Xu
 import math
 # First example
-import math
+def square_root(a):
+    if a < 0:
+        raise ValueError("Cannot take square root of a negative number")
+    return math.sqrt(a)
+
+
+def hypotenuse(a, b):
+    return math.hypot(a, b)
+
 
 def add(a, b):
     return a + b
