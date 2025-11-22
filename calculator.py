@@ -1,12 +1,13 @@
+# https://github.com/mdamoses-gh/lab11-MM-ZX.git
+# Partner 1: Moises Miranda Manzanedo
+# Partner 2: Ziyue Xu
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
 
 One function per operation, in order.
 """
-# https://github.com/mdamoses-gh/lab11-MM-ZX.git
-# Partner 1: Moises Miranda Manzanedo
-# Partner 2: Ziyue Xu
 import math
 # First example
 def square_root(a):
